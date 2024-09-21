@@ -1,0 +1,130 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.todo-container {
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 500px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.input-group {
+	display: flex;
+	margin-bottom: 20px;
+}
+
+input[type='text'] {
+	flex-grow: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	padding: 10px;
+	margin-left: 10px;
+	border: none;
+	background-color: #333;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: #218838;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s ease;
+}
+
+.task-text {
+	font-size: 20px;
+}
+
+li.completed .task-text {
+	font-size: 16px;
+	text-decoration: line-through;
+	color: grey;
+}
+
+.task-text,
+.task-edit {
+	flex-grow: 1;
+}
+
+li button {
+	background-color: #007bff;
+	border: none;
+	color: white;
+	padding: 5px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+li button.complete {
+	background-color: #00d26a;
+	min-width: 45px;
+}
+
+li button.edit {
+	background-color: #ffc107;
+}
+
+li button.save {
+	background-color: #28a745;
+}
+
+li button.remove {
+	background-color: #dc3545;
+}
+
+li button:hover {
+	opacity: 0.8;
+}
+
+.task-edit {
+	display: none;
+	width: 100%;
+	padding: 5px;
+	margin-right: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* Stylizacja powiadomień */
+.notification {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	display: none; /* Domyślnie ukrywamy powiadomienia */
+}
+
+.notification.active {
+	display: block;
+}
